@@ -1,0 +1,40 @@
+<h2>Cadastro de Produtos</h2>
+
+<form>
+    <div class="form-group">
+        <label for="id">Id</label>
+        <input type="number" class="form-control" id="key" name="key"
+                placeholder="Digite o ID"
+                [(ngModel)]="produto.key"
+                readonly>
+    </div>  
+    <div class="form-group">
+        <label for="nome">Nome</label>
+        <input type="text" class="form-control" id="nome" name="nome"
+                placeholder="Digite seu nome"
+                [(ngModel)]="produto.nome">
+    </div>    
+    <div class="form-group">
+        <label for="preco">Preço</label>
+        <input type="date" class="form-control" id="preco" name="preco"
+        [(ngModel)]="produto.preco">
+    </div>
+    <button class="btn btn-primary" (click)="salvar()">Salvar</button> 
+</form>`
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>ID</th>    
+            <th>Nome</th>    
+            <th>Preço</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let produto of produtos">
+            <td>{{ produto.key }}</td>
+            <td>{{ produto.nome }}</td>
+            <td>{{ produto.preco }}</td>
+        </tr>
+    </tbody>
+</table>

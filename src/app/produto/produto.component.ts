@@ -41,6 +41,15 @@ export class ProdutoComponent implements OnInit {
             });            
     }
 
+    excluir(key:string) {
+        if (confirm('Deseja realmente excluir?')){            
+            this.db.list('produtos').remove(key)
+            .then((result: any) => {
+                console.log(key);
+            }); 
+        }
+    }
+
     listar() {        
         this.getAll().subscribe(
             produtos => this.produtos = produtos,

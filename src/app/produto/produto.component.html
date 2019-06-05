@@ -35,6 +35,7 @@
             <td>{{ produto.key }}</td>
             <td>{{ produto.nome }}</td>
             <td>{{ produto.preco }}</td>
+            <td><button class="btn btn-primary" (click)="excluir(produto.key)">Excluir</button></td>
         </tr>
     </tbody>
 </table>

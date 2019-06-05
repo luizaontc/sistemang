@@ -28,6 +28,7 @@
             <th>ID</th>    
             <th>Nome</th>    
             <th>Data de Nascimento</th>
+            <th></th>
         </tr>
     </thead>
     <tbody>
@@ -35,6 +36,7 @@
             <td>{{ cliente.key }}</td>
             <td>{{ cliente.nome }}</td>
             <td>{{ cliente.dataNascimento }}</td>
+            <td><button class="btn btn-primary" (click)="excluir(cliente.key)">Excluir</button></td>
         </tr>
     </tbody>
 </table>

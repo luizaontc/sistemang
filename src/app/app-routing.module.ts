@@ -17,7 +17,7 @@ const routes: Routes = [
     ]
   },  
   { path: 'cliente', component: ClienteComponent},
-  { path: '', component: LoginComponent},
+  { path: 'login', component: LoginComponent},
   { path: 'produto', component: ProdutoComponent}
 ];
 

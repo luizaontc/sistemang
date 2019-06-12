@@ -23,7 +23,7 @@ export class LoginService {
 
             this.afAuth.auth.signInWithEmailAndPassword(mail, password).then((user) => {
 
-                localStorage['token'] = user.credential;
+                localStorage['user'] = mail;
                 this.router.navigate(['']);
                 console.log(user);
 

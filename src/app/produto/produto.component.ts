@@ -39,6 +39,7 @@ export class ProdutoComponent implements OnInit {
             .then((result: any) => {
                 console.log(result.key);
             });            
+            this.produto = new Produto(null, null, null);
     }
 
     excluir(key:string) {
@@ -47,10 +48,11 @@ export class ProdutoComponent implements OnInit {
             .then((result: any) => {
                 console.log(key);
             }); 
+            this.produto = new Produto(null, null, null);
         }
     }
 
-    listar() {        
+    listar() {      
         this.getAll().subscribe(
             produtos => this.produtos = produtos,
             error => alert(error),
@@ -59,7 +61,7 @@ export class ProdutoComponent implements OnInit {
     }
 
     getAll() : Observable<any[]> {
-        return this.db.list('produto')
+        return this.db.list('produtos')
           .snapshotChanges()
           .pipe(
             map(changes => {

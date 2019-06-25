@@ -7,6 +7,7 @@ import { AppComponent } from './app.component';
 import { ClienteComponent } from './cliente/cliente.component';
 import { LoginComponent } from './login/login.component';
 import { ProdutoComponent } from './produto/produto.component';
+import { CarrosComponent } from './carros/carros.component';
 
 import { AngularFireAuth  } from '@angular/fire/auth';
 
@@ -33,7 +34,8 @@ import { FormsModule } from '@angular/forms';
     AngularFireDatabaseModule,
     ClienteComponent,
     ProdutoComponent,
-    LoginComponent    
+    LoginComponent,
+    CarrosComponent    
   ],
   providers: [AuthGuard, LoginService, AngularFireModule, AngularFireAuth],
   bootstrap: [AppComponent]

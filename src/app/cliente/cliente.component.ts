@@ -33,12 +33,23 @@ export class ClienteComponent implements OnInit {
         this.cliente = new Cliente(null,null,null);
         this.listar();
     }
-
     salvar() {
-        this.db.list('clientes').push(this.cliente)
+        if (this.cliente.key == null) {
+            this.db.list('clientes').push(this.cliente)
+                .then((result: any) => {
+                    console.log(result.key);
+                });            
+        } else {
+            this.db.list('clientes').update(this.cliente.key,this.cliente)
             .then((result: any) => {
                 console.log(result.key);
-            });            
+            });  
+        }
+    }
+
+    carregar(cliente:Cliente) {
+        this.cliente = new Cliente(cliente.key,
+           cliente.nome, cliente.dataNascimento);
     }
 
     excluir(key:string) {

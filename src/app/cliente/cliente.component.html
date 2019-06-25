@@ -36,6 +36,7 @@
             <td>{{ cliente.key }}</td>
             <td>{{ cliente.nome }}</td>
             <td>{{ cliente.dataNascimento }}</td>
+            <td><button class="btn btn-primary" (click)="carregar(cliente)">Alterar</button></td>
             <td><button class="btn btn-primary" (click)="excluir(cliente.key)">Excluir</button></td>
         </tr>
     </tbody>

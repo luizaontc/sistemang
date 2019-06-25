@@ -1,0 +1,44 @@
+<h2>Cadastro de Carros</h2>
+
+<form>
+    <div class="form-group">
+        <label for="id">Id</label>
+        <input type="number" class="form-control" id="key" name="key"
+                placeholder="Digite o ID"
+                [(ngModel)]="carros.key"
+                readonly>
+    </div>  
+    <div class="form-group">
+        <label for="nome">Nome</label>
+        <input type="text" class="form-control" id="nome" name="nome"
+                placeholder="Digite a marca do carro"
+                [(ngModel)]="carros.nome">
+    </div>    
+    <div class="form-group">
+        <label for="dataFabricacao">Data de Fabricação</label>
+        <input type="date" class="form-control" id="dataFabricacao" name="dataFabricacao"
+        [(ngModel)]="carros.dataFabricacao">
+    </div>
+    <button class="btn btn-primary" (click)="salvar()">Salvar</button> 
+</form>`
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>ID</th>    
+            <th>Marca</th>    
+            <th>Data de Fabricação</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let carros of carross">
+            <td>{{ carros.key }}</td>
+            <td>{{ carros.nome }}</td>
+            <td>{{ carros.dataFabricacao }}</td>.
+            <td><button class="btn btn-primary" (click)="carregar(carros)">Alterar</button></td>
+            <td><button class="btn btn-primary" (click)="excluir(carros.key)">Excluir</button></td>
+            
+        </tr>
+    </tbody>
+</table>

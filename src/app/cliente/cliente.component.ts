@@ -33,6 +33,9 @@ export class ClienteComponent implements OnInit {
         this.cliente = new Cliente(null,null,null);
         this.listar();
     }
+
+
+      /*
     salvar() {
         if (this.cliente.key == null) {
             this.db.list('clientes').push(this.cliente)
@@ -46,7 +49,7 @@ export class ClienteComponent implements OnInit {
             });  
         }
     }
-
+  /*/
     carregar(cliente:Cliente) {
         this.cliente = new Cliente(cliente.key,
            cliente.nome, cliente.dataNascimento);

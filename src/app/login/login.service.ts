@@ -24,7 +24,7 @@ export class LoginService {
             this.afAuth.auth.signInWithEmailAndPassword(mail, password).then((user) => {
 
                 localStorage['user'] = mail;
-                this.router.navigate(['']);
+                this.router.navigate(['/sistema/cliente']);
                 console.log(user);
 
             })

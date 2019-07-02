@@ -33,7 +33,7 @@ export class CarrosComponent implements OnInit {
         this.carros = new Carros(null,null,null);
         this.listar();
     }
-
+  /*
     salvar() {
         if (this.carros.key == null) {
             this.db.list('carross').push(this.carros)
@@ -47,7 +47,7 @@ export class CarrosComponent implements OnInit {
             });  
         }
     }
-
+  /*/
     carregar(carros:Carros) {
         this.carros = new Carros(carros.key,
             carros.nome, carros.dataFabricacao);

@@ -34,7 +34,7 @@ export class ProdutoComponent implements OnInit {
         this.listar();
     }
 
-    salvar() {
+  /*  salvar() {
         if (this.produto.key == null) {
             this.db.list('produtos').push(this.produto)
                 .then((result: any) => {
@@ -47,7 +47,7 @@ export class ProdutoComponent implements OnInit {
             });  
         }
     }
-
+*/
     carregar(produto:Produto) {
         this.produto = new Produto(produto.key,
             produto.nome, produto.preco);
